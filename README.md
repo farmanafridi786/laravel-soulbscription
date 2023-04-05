@@ -8,7 +8,7 @@
 
 ## About
 
-A straightforward interface to handle subscriptions and features consumption.
+A straightforward interface to handle subscriptions and features consumption
 
 ## Installation
 
