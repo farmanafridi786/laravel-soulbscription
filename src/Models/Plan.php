@@ -2,6 +2,7 @@
 
 namespace LucasDotVin\Soulbscription\Models;
 
+use App\Models\Pricing;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -20,6 +21,11 @@ class Plan extends Model
         'periodicity_type',
         'periodicity',
     ];
+
+    public function prices()
+    {
+        return $this->hasManyThrough(Pricing::class, Plan::class, 'id', 'plan_id');
+    }
 
     public function features()
     {
